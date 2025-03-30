@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2d2d2d;
+        }
+        .header {
+            background: url('https://i.imgur.com/Rkc3UaF.jpeg') no-repeat center center/cover;
+            color: black;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            text-align: center;
+            position: relative;
+        }
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid black;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+        }
+        .header h1 {
+            margin-top: 15px;
+            font-size: 28px;
+            position: relative;
+            color: black;
+        }
+        .social-icons {
+            margin-top: 10px;
+            position: relative;
+        }
+        .social-icons a {
+            margin: 0 15px;
+            color: black;
+            text-decoration: none;
+            font-size: 28px;
+            transition: 0.3s;
+        }
+        .social-icons a:hover {
+            color: #333;
+        }
+	.social-name {
+            position: absolute;
+            right: 20px; /* Positioned at the far right */
+            bottom: 10px; /* Adjusted to place it below the icons */
+            font-size: 14px;
+            color: black;
+            font-weight: bold;
+	}
+        .content {
+            max-width: 900px;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .bubble {
+            padding: 20px;
+            background: #3a3a3a;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .sub-bubble {
+            background: #505050;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #6a11cb;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: white;
+        }
+        .resume-btn {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            padding: 8px 15px;
+            background: #6a11cb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            width: 150px;
+            transition: 0.3s;
+        }
+        .resume-btn:hover {
+            background: #2575fc;
+        }
+        .dropdown {
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            margin-top: 10px;
+        }
+        .dropdown-content {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="profile.jpg" alt="Profile Picture">
+        <h1>JOEL P JACOB</h1>
+        <div class="social-icons">
+            <a href="https://github.com/hopless-freak" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/jvxoj/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+	<div class="social-name">KAZE</div>
+    </div>
+    <div class="content">
+        <div class="bubble">
+            <h2>About Me</h2>
+            <p>I'm a second-year AI and Machine Learning student with a strong foundation in Java, C++, and R. Passionate about coding and problem-solving, I'm expanding into full-stack development to create intelligent and efficient applications. I thrive on exploring complex tech concepts, researching AI techniques, and experimenting with new programming paradigms. Constantly seeking knowledge, I push my limits to stay ahead in this evolving field. My goal is to integrate AI with full-stack solutions to build impactful and adaptive applications.</p>
+        </div>
+        <div class="bubble">
+            <h2>Skills</h2>
+            <p>Java, R Programming, C++, Python, Full-Stack (HTML, CSS, JavaScript)</p>
+        </div>
+        <div class="bubble">
+            <h2>Achievements</h2>
+            <p>Proficiency award in English for highest marks in class.</p>
+        </div>
+        <div class="bubble">
+            <h2>Education</h2>
+            <p>BSc Artificial Intelligence and Machine Learning</p>
+            <p><strong>University:</strong> Bharathiar University</p>
+            <p><strong>College:</strong> Sree Narayana Guru College, Coimbatore</p>
+        </div>
+       <div class="bubble">
+    <h2>Projects</h2>
+    <ul>
+        <li><span class="dropdown" onclick="toggleDropdown('mouse')">Hand Controlled AI Virtual Mouse ▼</span>
+            <div class="dropdown-content" id="mouse">
+                <div class="sub-bubble">
+                    <p>This project replaces a traditional mouse with hand gestures using AI. Built with OpenCV, MediaPipe, and PyAutoGUI, it tracks hand movements via a webcam, allowing users to control the cursor and perform click actions without a physical mouse.</p>
+                    <p><strong>How It Works:</strong></p>
+                    <ul>
+                        <li>The index finger moves the cursor.</li>
+                        <li>Bringing the index finger and thumb together performs a click.</li>
+                        <li>Uses MediaPipe for hand tracking and PyAutoGUI for mouse control.</li>
+                        <li>A smoothening factor ensures fluid cursor movement.</li>
+                    </ul>
+                    <p><strong>Tech Stack:</strong> Python, OpenCV, MediaPipe, PyAutoGUI</p>
+                    <p><strong>Libraries:</strong> NumPy, Matplotlib, Pillow</p>
+                </div>
+            </div>
+        </li>
+        <li><span class="dropdown" onclick="toggleDropdown('assistant')">AI Voice Assistant ▼</span>
+            <div class="dropdown-content" id="assistant">
+                <div class="sub-bubble">
+                    <p>This project develops a secure, ethical, and efficient AI voice assistant that processes voice and text commands. It integrates speech recognition, NLP, and ML to automate tasks, answer queries, and execute system commands.</p>
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>Privacy-Focused: Local processing, minimal data collection, and user-controlled history.</li>
+                        <li>Ethical AI: Transparent, unbiased responses with human oversight.</li>
+                        <li>Efficient & Sustainable: Optimized AI models for reduced power consumption.</li>
+                        <li>Multimodal Interaction: Supports both voice and text input.</li>
+                        <li>Smart Commands: Can open apps, adjust volume, and control system functions.</li>
+                    </ul>
+                    <p><strong>Tech Stack:</strong></p>
+                    <p>Hardware: AMD Ryzen 7, 16GB RAM, NVIDIA GPU (optional).</p>
+                    <p>Software: Python, TensorFlow, Flask, OpenAI’s GPT, SpeechRecognition.</p>
+                    <p>Tools: VS Code, PyCharm, Git, Kaggle datasets.</p>
+                </div>
+            </div>
+        </li>
+        <li><span class="dropdown" onclick="toggleDropdown('bot')">AI WhatsApp Bot (Atlas MD, Ragnarok MD) ▼</span>
+            <div class="dropdown-content" id="bot">
+                <div class="sub-bubble">
+                    <p>Atlas MD (Ragnarok MD) is an advanced AI-powered WhatsApp bot designed to offer unique automation, entertainment, and utility features. Unlike regular bots, it comes with cutting-edge AI, NLP, and moderation tools.</p>
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>🔹 PM Permit (Upcoming) – Control who can message you.</li>
+                        <li>🔹 Auto NSFW Detection – Detects inappropriate content with percentage accuracy.</li>
+                        <li>🔹 First WhatsApp Bot with NLP AI – Smart conversational AI for better responses.</li>
+                        <li>🔹 Text to Sticker – Create stickers from text.</li>
+                        <li>🔹 Scribd Link Unlocker – Access locked content easily.</li>
+                        <li>🔹 Torrent Search – Find torrents directly on WhatsApp.</li>
+                        <li>🔹 Multi-Language Translator – Translate text into any language.</li>
+                        <li>🔹 Text Maker – Stylish text customization.</li>
+                        <li>🔹 Anime Features – Random anime, character search, and reactions.</li>
+                        <li>🔹 Content Downloaders – Download from YouTube, Facebook, Twitter, TikTok.</li>
+                        <li>🔹 Utility Commands – IP lookup, IMDb search, sticker maker, emoji mix.</li>
+                        <li>🔹 MongoDB Support – Ensures data persistence.</li>
+                        <li>🔹 Customizable NSFW Switch – Enable or disable NSFW features anytime.</li>
+                        <li>🔹 Daily Feature Updates – New commands added regularly.</li>
+                    </ul>
+                    <p><strong>Command Usage:</strong> Use prefix+command help (e.g., -scribd help) to explore features.</p>
+                </div>
+            </div>
+        </li>
+        <li><span class="dropdown" onclick="toggleDropdown('generator')">AI Image Generator ▼</span>
+            <div class="dropdown-content" id="generator">
+                <div class="sub-bubble">
+                    <p>The AI Image Generator leverages advanced machine learning and deep neural networks to create stunning images based on user input.</p>
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>🎨 Text-to-Image Generation – Create images from simple text prompts.</li>
+                        <li>🖌️ Style Customization – Generate images in different art styles.</li>
+                        <li>🌎 AI-Powered Creativity – Uses Stable Diffusion, DALL·E, and MidJourney-style models.</li>
+                        <li>🖼️ High-Resolution Outputs – Produces HD images with vibrant details.</li>
+                        <li>⚙️ Custom Fine-Tuning – Adjust image parameters.</li>
+                        <li>🧠 Deep Learning-Optimized – Trained on vast datasets.</li>
+                        <li>🚀 Fast Generation Speed – Get AI-generated images in just seconds.</li>
+                        <li>🔄 Multiple Variations – Generates different versions of an image.</li>
+                        <li>🔍 Face & Object Recognition – Can generate human-like faces and objects.</li>
+                        <li>🔧 Easy Integration – Can be deployed as a bot, API, or standalone application.</li>
+                    </ul>
+                    <p><strong>Use Cases:</strong></p>
+                    <ul>
+                        <li>✅ Artists & Designers – Generate inspiration and concept art.</li>
+                        <li>✅ Content Creators – Create unique visuals for blogs and social media.</li>
+                        <li>✅ Marketing & Branding – Design eye-catching graphics for ads.</li>
+                        <li>✅ Game Developers – Generate characters and environments.</li>
+                        <li>✅ AI Experimentation – Explore generative AI possibilities.</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+        <a class="resume-btn" href="resume.pdf" target="_blank">View Resume</a>
+    </div>
+</body>
+</html>
+
